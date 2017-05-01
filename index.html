@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Genetic algorithms for the traveling sallesman problem</title>
+  <script type="text/javascript" src="p5.js"></script>
+  <script type="text/javascript" src="p5.sound.js"></script>
+  <script type="text/javascript" src="p5.dom.js"></script>
+  <script type="text/javascript" src="sketch.js"></script>
+  <script type="text/javascript" src="algorithms.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <h1>Comparison of algorithms</h1>
+  <div id="main_canvas"></div>
+  <ul>
+    <li>Random search just randomly suffles the order of the nodes to calculate distance.</li>
+    <li>Brute force searches every possible combination sequence of the nodes using a lexical algorithm.</li>
+    <li id="ga_info">GA probabilisticaly keeps the best ones, mutated five times. Also, it keeps the best one once as it is and one extra time mutated five times.</li>
+  </ul>
+</html>
+</body>
