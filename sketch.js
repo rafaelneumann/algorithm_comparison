@@ -1,5 +1,5 @@
 // Crazy global variables
-var num_of_nodes = 15;
+var num_of_nodes = 12;
 var points = [];
 var random_search;
 var brute_search;
