@@ -12,7 +12,14 @@ var best_ever_found_frame = 0;
 
 // Setup for p5.js
 function setup() {
+  // Get the number of cities
+  let new_number = Number(getURLParams()['cities']);
+  if (new_number > 0) {
+	num_of_nodes = new_number;
+  }
+  
   combinations = factorial(num_of_nodes);
+  
   my_canvas = createCanvas(900, 400);
   my_canvas.parent('main_canvas');
 
@@ -47,7 +54,7 @@ function draw() {
   background(51);
   stroke(0);
   fill(255);
-
+  
   // Draw the separating lines
   stroke(255);
   line(300, 0, 300, height);
@@ -227,4 +234,9 @@ function factorial(n) {
   } else {
     return n * factorial(n-1);
   }
+}
+
+function change_cities() {
+  let new_number = document.getElementById('new_number_of_cities').value;
+  window.location.href = getURL().split('?')[0] + '?cities=' + new_number;
 }
